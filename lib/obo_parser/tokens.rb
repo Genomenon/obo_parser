@@ -66,7 +66,7 @@ module OboParser::Tokens
         qq = 0 # some failsafes
         while xref_list.length > 0
           qq += 1
-          raise "#{xref_list} is seemingly infinite" if qq > 500
+          raise "#{xref_list} is seemingly infinite" if qq > 2500
           xref_list.gsub!(/\A\s*,\s*/, '')
 
           xref_list =~ /\A(.+?:[^\"\{\,]+)/i 
